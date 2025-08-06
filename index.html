@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <h1>TO DO LIST</h1>
+    </div>
+    <div class="form">
+      <form>
+        <div>
+          <input type="text" id="create-list" placeholder="Inserisci la tua task" />
+          <button type="submit">Crea</button>
+        </div>
+      </form>
+    </div>
+    <div id="container-list">
+      <ul class="todo-list"></ul>
+      <div id="reset-bottom" class="reset-check">
+        <button type="reset">Reset completati</button>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
