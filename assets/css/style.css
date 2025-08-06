@@ -61,29 +61,73 @@ form button {
 }
 
 #container-list {
-  align-items: center;
+  /* align-items: center; */
   max-width: 100%;
 }
 
 li {
-  display: inline-block;
-  padding: 7px;
+  /* display: inline-block; */
+  display: block;
+  padding: 0px 7px;
   font-size: 30px;
   border-radius: 30px;
+  /* max-width: 85%; */
+  text-align: left;
+  /*aggiunto ora*/
+  overflow: hidden; /* per contenere i float */
+  position: relative;
+  /*dopo aver eliminato il div nel ul*/
+  width: 700px;
+  margin: 1rem auto;
+  background: rgba(247, 226, 223, 0.29);
+  color: black;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  display: block;
+  margin-right: 5em; /* spazio per i bottoni */
+  word-wrap: break-word;
+  /*dopo aver eliminato il div nel ul*/
+  padding-block: 10px;
+  text-align: center;
+  line-height: 1.5em; /* simile all’altezza del li */
+}
+
+.span-buttons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
 }
 
 .check,
-.trash,
-.return {
+.trash {
   font-size: 19px;
   cursor: pointer;
   width: 2em;
   height: 2em;
   border-radius: 80%;
-  margin: 0 5px;
+  margin-left: 4px;
+  /**/
+  text-align: center;
+  line-height: 2.2em;
+}
+/*dopo aver eliminato il div nel ul*/
+.check:hover {
+  background: linear-gradient(100deg, #4caf50, #2e7d32);
+  color: white;
+  transform: scale(1.1);
 }
 
-.div-lista {
+.trash:hover {
+  background: linear-gradient(100deg, #e53935, #b71c1c);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* .div-lista {
   width: 700px;
   margin: 1rem;
   margin-inline: auto;
@@ -92,20 +136,39 @@ li {
   font-size: 19px;
   padding: 0.25em 0.5em;
   border-radius: 30px;
-}
+} */
 
 .completato {
   text-decoration: line-through;
   opacity: 0.6;
 }
+.return {
+  text-decoration: none;
+  opacity: 1;
+}
 
 #reset-bottom button {
-  padding: 7px 0px 10px;
+  padding: 7px 10px 10px;
   font-size: 20px;
   border: 15px;
   border-radius: 10px;
   min-width: 100px;
   background-color: #ffdfdb;
-  margin-left: -8px;
+  margin-left: 5px;
   border-left: solid 1px rgb(247, 226, 223);
+}
+
+.reset-check:hover {
+  transform: scale(1.08); /* leggero ingrandimento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(100deg, #4caf50, #2e7d32);
+  color: white;
+  border: 5px solid #000000;
+}
+.remove-all:hover {
+  transform: scale(1.08); /* leggero ingrandimento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(100deg, #e53935, #b71c1c);
+  color: white;
+  border: 5px solid #000000;
 }
