@@ -66,7 +66,7 @@ insertLi.addEventListener("click", function (e) {
   } else if (button.classList.contains("return")) {
     const divLi = button.closest(".div-lista");
     const liCheck = divLi.querySelector("li");
-    liCheck.style.textDecoration = "none";
+    liCheck.classList.toggle("completato");
   }
 });
 
